@@ -1,0 +1,21 @@
+version: "3"
+services:
+  party0:
+    build: .
+    volumes:
+      - ./keys/fssKeys_party0:/go/src/app/keys/fssKeys_party0
+      - ./jsondata/data0.json:/go/src/app/jsondata/data0.json
+      - ./results/party0:/go/src/app/results/party0
+    tty: true
+    environment:
+      - SERVER_ID=0
+
+  party1:
+    build: .
+    volumes:
+      - ./keys/fssKeys_party1:/go/src/app/keys/fssKeys_party1
+      - ./jsondata/data1.json:/go/src/app/jsondata/data1.json
+      - ./results/party1:/go/src/app/results/party1
+    tty: true
+    environment:
+      - SERVER_ID=1
