@@ -1,5 +1,10 @@
 # Demo for 2-Party PIR
 
+## 0. 検索対象の ID を指定する。
+
+json データベース `jsondata/data.json` において、どの id を検索対象とするか指定するため、
+[client.go の Genkey() 関数における、変数 a の値](https://github.com/fieldflat/fss-pir/blob/main/src/pir/client.go#L514) を変更する。
+
 ## 1. docker-compose up
 
 下記コマンドを実行し、2つの Party を立てる。
@@ -46,7 +51,7 @@ $ go run main.go pir_eval
 ```
 ### container
 
-$ ls -l ./keys/
+$ ls -l ./results/
 ```
 
 ## 4. 復号
